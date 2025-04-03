@@ -1,0 +1,57 @@
+{% load static %}
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>장고프레임워크(Django)</title>
+<link href="{% static 'css/top.css' %}"
+      rel="stylesheet"  type="text/css" />
+
+</head>
+<body>
+<header>
+  안전모착용 인원 탐지 AI구현(YOLOv8 사용)
+</header>
+<nav >
+<div >
+&emsp;   &emsp; &emsp; &emsp; &emsp; &emsp;
+{% if admin  %}
+[<a href="{% url 'burger_list' %}"> 1.버거목록보기</a>&emsp;
+<a href="{% url 'burger_form' %}">2.버거상품등록</a>]
+{% endif %}
+&emsp;&emsp;
+
+&emsp;
+{% if admin  %}
+[<a href="{% url 'board_list' %}"> 1.목록보기</a> &emsp;
+<a href="{% url 'board_form' %}">2.글쓰기</a>] &emsp;
+
+[<a href="{% url 'student_list' %}"> 1.학생목록</a> &emsp;
+<a href="{% url 'student_enrol' %}">2.학생등록목록</a>&emsp;
+    <a href="{% url 'student_course_enrol' %}">3.전체목록</a>&emsp;
+    <a href="{% url 'subquery1' %}">5.subquery1(S)</a>&emsp;
+    <a href="{% url 'subquery2' %}">5.subquery2(U)</a>&emsp;
+    <a href="{% url 'student_form' %}">6.학생등록</a>&emsp;
+  ] &emsp;&emsp;
+        [
+  <a href="{% url 'request_json_sql' %}">1.restful(J)</a>&emsp;
+  <a href="{% url 'request_xml_sql' %}">2.restful(X)</a>&emsp;
+]
+  {% endif %}
+
+  [ <a href="{% url 'gemini_txt' %}"> 1.gemini_txt</a>&emsp;
+   &emsp;
+    <a href="{% url 'alibaba_api' %}">2.alibaba_api</a>&emsp;
+    <a href="{% url 'chatgpt' %}">3.chatgpt</a> ]&emsp;&emsp;
+
+    [ <a href="{% url 'gemini_img' %}">1.gemini_img</a>&emsp;
+    <a href="{% url 'chatgpt_api_img' %}">2.이미지분석</a>&emsp;
+    <a href="{% url 'yolo_helmet' %}">3.YOLO</a>&emsp;
+
+  ]
+  &emsp;  &emsp; &emsp;  &emsp; &emsp; &emsp;
+ <a href="/">홈으로</a>
+</div>
+</nav>
+<section>
+<br/>
